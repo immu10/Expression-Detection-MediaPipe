@@ -57,9 +57,10 @@ while True:
                 if head_size >0.45:
                     print("too close, please move back")
                     continue
+                print(head_size,"head_size\n")
                 
                 raised_eyebrow_distance = math.dist((detection[107].x,detection[107].y),(detection[109].x,detection[109].y))
-                print(raised_eyebrow_distance,"raised_eyebrow_distance\n")
+                # print(raised_eyebrow_distance,"raised_eyebrow_distance\n")
                 if raised_eyebrow_distance < 0.05:
                     frame = raisedEyebrowsFrame.copy()
                     continue
